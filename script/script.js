@@ -1,5 +1,25 @@
 'use strict';
 
+let inputSalaryAmount = document.querySelector(".salary-amount"),
+    inputIncomeTitle = document.querySelector(".income-items>.income-title"),
+    inputIncomeAmount = document.querySelector(".income-amount"),
+    plusIncome = document.getElementsByTagName("button")[0],
+    inputAdditionalIncomeItem = document.querySelectorAll(".additional_income-item"),
+    inputExpensesTitle = document.querySelector(".expenses-items>.expenses-title"),
+    inputExpensesAmount = document.querySelector(".expenses-amount"),
+    plusExpenses = document.getElementsByTagName("button")[1],
+    inputAdditionalExpensesItem = document.querySelector(".additional_expenses-item"),
+    depositCheckbox = document.querySelector("#deposit-check"),
+    inputPeriodSelect = document.querySelector(".period-select"),
+    inputBudgetMonthValue = document.querySelector(".budget_month-value"),
+    inputBudgetDayValue = document.getElementsByClassName("budget_day-value"),
+    inputExpensesMonthValue = document.getElementsByClassName("expenses_month-value"),
+    inputAdditionalIncomeValue = document.getElementsByClassName("additional_income-value"),
+    inputAdditionalExpensesValue = document.getElementsByClassName("additional_expenses-value"),
+    inputIncomePeriodValue = document.getElementsByClassName("income_period-value"),
+    inputTargetMonthValue = document.getElementsByClassName("target_month-value"),
+    calculationButton = document.getElementById("start");
+
 let isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 };
@@ -150,3 +170,4 @@ for (let i = 0; i < appData.addExpenses.length; i++) {
 }
 
 console.log(appData.addExpenses.join(", "));
+
